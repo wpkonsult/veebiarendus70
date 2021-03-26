@@ -1,0 +1,12 @@
+.pais {
+    background: url('./matkaja.png');
+    background-repeat: no-repeat;
+    background-size: auto;
+}
+
+@media screen and (min-width: 400px) {
+    .pais {
+        background-size: cover;
+        background-position-y: -54px;
+    }
+}

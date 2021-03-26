@@ -1,0 +1,43 @@
+html {
+    font-size: 18px;
+}
+body {
+    background-color: cadetblue;
+    font-family: 'Rubik', sans-serif;
+}
+
+.konteiner {
+    width: 90%;
+    max-width: 700px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: beige;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+.uudis {
+    margin-bottom: 2rem;
+}
+
+.uudis-pealkiri {
+    font-size: 2rem;
+}
+
+.uudis-kuup {
+    font-weight: bold;
+    font-size: 0.80rem;
+    color: darkgreen;
+}
+
+.uudis-sisu-konteiner {
+    display: flex;
+}
+
+img {
+    width: 33%;
+}

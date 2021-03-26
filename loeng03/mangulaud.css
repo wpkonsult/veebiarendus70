@@ -1,0 +1,47 @@
+body {
+    background-color: cadetblue;
+    font-family: 'Rubik', sans-serif;
+}
+
+.konteiner, .konteiner-flex {
+    width: 90%;
+    max-width: 700px;
+    margin-top: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: beige;
+    padding: 5px;
+}
+
+.konteiner-flex {
+    display: flex;
+    /*justify-content: flex-end;*/
+    height: 600px;
+    /*align-items: center;*/
+    flex-wrap: wrap;
+}
+
+.kast, .kast-vaike {
+    width: 32%;
+    background-color: darkorange;
+    border-color: black;
+    border-style: solid;
+    border-width: 0px;
+}
+
+.kast-vaike {
+    width: 20%;
+    box-sizing: border-box;
+    border-width: 2px;
+}
+
+.vertikaalne {
+    border-left-width: 3px;
+    border-right-width: 3px;
+}
+
+.horisontaalne {
+    border-top-width: 3px;
+    border-bottom-width: 3px;
+}
+
