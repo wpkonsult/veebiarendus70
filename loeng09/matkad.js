@@ -44,8 +44,7 @@ function naitaMatkaAruannet(matk) {
     let kirjeldus = 'Nimetus: ' + matk.nimetus 
     kirjeldus += ", osalejaid: " + matk.osalejaid 
     kirjeldus += ", registreerunuid: " + matk.registreerunud.length
-    kirjeldus += ", veel vabu kohti: " + (matk.osalejaid - matk.registreerunud.length)
-       
+    kirjeldus += ", veel vabu kohti: " + (matk.osalejaid - matk.registreerunud.length) 
     
     valjundElement.innerHTML += "<div>" + kirjeldus + "</div>"
 }
