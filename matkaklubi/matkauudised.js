@@ -2,40 +2,45 @@
 const koikUudised = [
     {
         pealkiri: "Esimene uudis",
-        kuupäev: "02.01.2021",
+        kuupaev: "02.01.2021",
         sisu: "Esimene uudis mis räägib sellest et matkata on hea"
     },
     {
         pealkiri: "Teine uudis",
-        kuupäev: "13.03.2021",
+        kuupaev: "13.03.2021",
         sisu: "Teine uudis mis tõestab, et matkamine on tervisele kasulik"
            
     },
     {
         pealkiri: "Kolmas uudis",
-        kuupäev: "25.034.2021",
+        kuupaev: "25.034.2021",
         sisu: "Kolmas uudis räägib matkamise sotsiaalsest headusest"
     },
 ]
-    
-    
-    function tervita(tekst) {
-        console.log('Tere' + tekst)
+
+
+function teeUudisHtml(uudisObj) {
+    let uudisHtml = '';
+    uudisHtml += '<div class="postitus pt-3">';
+    uudisHtml +=    '<div class="d-flex justify-content-between">';
+    uudisHtml +=        '<h3>'+uudisObj.pealkiri+'</h3>';
+    uudisHtml +=        '<div class="postitus-kuupaev">'+ uudisObj.kuupaev+'</div>';
+    uudisHtml +=    '</div>';
+    uudisHtml +=    '<div class="postitus-sisu">';
+    uudisHtml +=        uudisObj.sisu;
+    uudisHtml +=    '</div>';
+    uudisHtml += '</div>';
+
+    return uudisHtml;
+}
+
+function naitaUudiseid() {
+    const uudisedElement = document.getElementById('uudistekonteiner');
+    let koikUudisedHtml = '';
+    for (uudis of koikUudised) {
+        koikUudisedHtml += teeUudisHtml(uudis);
     }
-
-function testFunktsioon() {
-    for ( i of koikUudised ) {
-        console.log(i.pealkiri)        
-    }
+    uudisedElement.innerHTML = koikUudisedHtml;
 }
 
-//See teeb sama mis testFunktsioon
-function naitaPealkirja(uudis) {
-    console.log(uudis.sisu)
-}
-
-function testFunktsioon2() {
-    koikUudised.forEach(naitaPealkirja)
-}
-
-testFunktsioon()
+naitaUudiseid()
